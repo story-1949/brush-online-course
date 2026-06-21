@@ -1,0 +1,85 @@
+courses:
+- chapters: []
+  completed_chapters: []
+  last_position: {}
+  name: 测试课程-高等数学
+  platform: chaoxing_xuexitong
+  url: https://mooc1-2.chaoxing.com/mycourse/studentcourse?crcid=test123
+- chapters: []
+  completed_chapters: []
+  last_position: {}
+  name: 高等数学
+  platform: chaoxing_xuexitong
+  url: https://mooc1-2.chaoxing.com/mycourse/studentcourse?crcid=1001
+- chapters: []
+  completed_chapters: []
+  last_position: {}
+  name: 大学英语
+  platform: zhinengzhi
+  url: https://www.zhihuishu.com/video/videoCourse.html
+- chapters: []
+  completed_chapters: []
+  last_position: {}
+  name: 计算机基础
+  platform: china_mooc
+  url: https://www.icourse163.org/course/ZJU-1002092004
+general:
+  auto_next_delay: 3
+  browser: chromium
+  enable_notifications: true
+  headless: false
+  max_video_duration: 3600
+  playback_speed: 2.0
+  retry_count: 3
+  retry_delay: 5
+  timeout: 30000
+platforms:
+  chaoxing_xuexitong:
+    base_url: https://mooc1-2.chaoxing.com
+    login_url: https://passport.chaoxing.com/login
+    name: 超星学习通
+    next_button_selector: .next_btn, button[data-next]
+    progress_selector: .progress_bar, .current_time
+    url_patterns:
+    - chaoxing\.com
+    - mooc[0-9]*\.chaoxing\.com
+    - passport\.chaoxing\.com
+    video_selector: '.video_player, #video'
+  china_mooc:
+    base_url: https://www.icourse163.org
+    login_url: https://www.icourse163.org/user/login/jsonp
+    name: 中国大学MOOC
+    next_button_selector: .next-lesson, .btn-next
+    progress_selector: .lesson-progress
+    url_patterns:
+    - icourse163\.org
+    - icourse\.org
+    video_selector: '#videoFrame iframe, .mooc-video video'
+  icourses:
+    base_url: https://www.icourses.cn
+    login_url: https://www.icourses.cn/user/login
+    name: iCourses
+    next_button_selector: .next-chapter, .btn-next
+    progress_selector: .progress-bar
+    url_patterns:
+    - icourses\.cn
+    video_selector: video, .player video
+  icve:
+    base_url: https://www.icve.com.cn
+    login_url: https://www.icve.com.cn/login
+    name: ICVE
+    next_button_selector: .next-step, .next-course
+    progress_selector: .progress-info
+    url_patterns:
+    - icve\.com\.cn
+    video_selector: video, .video-player video
+  zhinengzhi:
+    base_url: https://www.zhihuishu.com
+    login_url: https://account.zhihuishu.com/login
+    name: 智慧树
+    next_button_selector: .next-course, .next-btn
+    progress_selector: .progress-text
+    url_patterns:
+    - zhihuishu\.com
+    - account\.zhihuishu\.com
+    video_selector: .video-container video, iframe[src*=player]
